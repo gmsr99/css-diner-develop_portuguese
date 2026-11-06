@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Diner - Onde jantamos com seletores CSS!</title>
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/levels.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href='https://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title"
+    charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:title" content="CSS Diner" />
+  <meta property="og:description" content="Um jogo divertido para aprender e praticar seletores CSS." />
+  <meta property="og:image" content="images/fb-share.jpg" />
+</head>
+
+<body>
+  <div class="left-col">
+
+    <header>
+      CSS Diner
+      <div class="logo">
+        <prato>
+          <maca />
+        </prato>
+      </div>
+      <span class="share-menu">
+        Partilhar
+        <a class="share-twitter" type="twitter" href="#"></a>
+        <a class="share-facebook" type="facebook" href="#"></a>
+        <a class="share-email" type="email" href="#"></a>
+      </span>
+    </header>
+
+    <h2 class="order"></h2>
+
+    <div class="note">
+      <h3>Não te preocupes, tu consegues!</h3>
+      <p>
+        Vais aprender seletores CSS!
+        Os seletores servem para escolher os elementos a que queres aplicar estilos.
+      </p>
+
+      <h4>Exemplo 1 - Uma regra CSS</h4>
+
+      <pre>
+p {
+   margin-bottom: 12px;
+}</pre>
+
+      <p>
+        Aqui, o "p" é o seletor (seleciona todos os elementos &lt;p&gt;) e aplica-lhes o estilo margin-bottom.
+      </p>
+      <p>
+        Para jogar, escreve um seletor CSS no editor abaixo para selecionares os itens certos da mesa. Se acertares,
+        passas ao nível seguinte.
+      </p>
+      <p>
+        Passa o rato sobre os itens da mesa para veres o respetivo código HTML.
+      </p>
+      <p>
+        Os nomes da comida estão em português e sem acentos (a maçã é &lt;maca&gt;), mas as palavras do próprio CSS,
+        como :first-child, são sempre em inglês.
+      </p>
+      <p>
+        Tens ajuda sobre os seletores à direita! &rarr;
+      </p>
+      <a class="note-toggle" href="#">OK, percebi!</a>
+    </div>
+
+    <a class="note-toggle" href="#">Preciso de ajuda!</a>
+
+    <div class="game-wrapper">
+      <div class="table-wrapper">
+        <div class="table-surface"></div>
+        <div class="nametags"></div>
+        <div class="mesa"></div>
+      </div>
+      <div class="table-edge">
+        <div class="table-leg"></div>
+        <div class="table-leg"></div>
+      </div>
+    </div>
+
+    <div class="editor">
+
+      <div class="editor-pane">
+        <div class="input-header">
+          <div class="file-name">estilos.css</div> Editor CSS
+        </div>
+        <div class="file-window css-view">
+          <div class="line-numbers">
+            1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20
+          </div>
+          <input class="input-strobe" type="text" placeholder="Escreve um seletor CSS" /><span class="plus">+</span>
+          <div class="enter-button">enter</div>
+          <div>
+            {<br />
+            /* Os estilos ficariam aqui. */<br />
+            }
+          </div>
+          <div class="help">
+            <br />
+            /* <br />
+            Escreve um número para saltar para um nível.<br />
+            Ex. &rarr; "5" para o nível 5 <br />*/
+          </div>
+        </div>
+      </div>
+
+      <div class="editor-pane html-view">
+        <div class="input-header">
+          <div class="file-name">mesa.html</div>
+          Visualizador HTML
+        </div>
+        <div class="file-window">
+          <div class="line-numbers">
+            1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20
+          </div>
+          <div class="markup"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="what-is-this">
+      <p>
+        Jogo original de <a href="http://www.twitter.com/flukeout">@flukeout</a> &mdash; <a
+          href="https://github.com/flukeout/css-diner">CSS Diner no GitHub</a>.
+      </p>
+      <p>
+        Versão em português de Portugal, distribuída sob a <a href="https://www.mozilla.org/MPL/2.0/">Mozilla Public
+          License 2.0</a>.
+      </p>
+    </div>
+
+    <div class="helper"><!-- This is the popup that floats over table elements --></div>
+
+  </div><!-- /left-col -->
+
+  <div class="right-col">
+
+    <div class="help-wrapper">
+
+      <h1 class="level-header">
+        <span class="level-text"></span>
+        <span class="checkmark"></span>
+      </h1>
+
+      <div class="level-nav">
+        <a class="previous" href="#"></a>
+        <a class="next" href="#"></a>
+      </div>
+
+      <div class="level-progress">
+        <div class="progress"></div>
+      </div>
+
+      <div class="display-help">
+        <h3 class="selector-name"></h3>
+        <h2 class="title"></h2>
+        <h3 class="syntax"></h3>
+        <div class="hint"></div>
+        <h4 class="examples-title">Exemplos</h4>
+        <div class="examples"></div>
+      </div>
+    </div>
+
+    <div class="level-menu">
+      <h2>Escolhe um nível</h2>
+      <div class="levels"><!-- level links are inserted here--></div>
+      <a class="reset-progress" href="#">Reiniciar progresso</a>
+    </div>
+
+    <div class="level-menu-toggle-wrapper">
+      <div class="level-menu-toggle"></div>
+    </div>
+
+  </div><!-- /right-col -->
+
+</body>
+
+</html>
