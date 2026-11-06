@@ -380,7 +380,7 @@ var levels = [
     help : "Seleciona o filho que está na posição <strong>n</strong> (ex.: 1.º, 3.º, 12.º, etc.) dentro de outro elemento.",
     examples : [
       '<strong>:nth-child(8)</strong> seleciona todos os elementos que são o 8.º filho de outro elemento.',
-      '<strong>div p:nth-child(2)</strong> seleciona o segundo <strong>p</strong> de cada <strong>div</strong>',
+      '<strong>div p:nth-child(2)</strong> seleciona cada <tag>p</tag> que está dentro de um <tag>div</tag> e é o 2.º filho do seu elemento pai. Se o 2.º filho não for um <tag>p</tag>, não seleciona nada nesse pai.',
     ],
     boardMarkup : `
     <prato/>
@@ -440,7 +440,7 @@ var levels = [
     help: "Seleciona um elemento específico com base no tipo e na ordem dentro de outro elemento - ou as ocorrências pares (<strong>even</strong>) ou ímpares (<strong>odd</strong>) desse elemento.",
     examples: [
       '<strong>div:nth-of-type(2)</strong> seleciona a segunda ocorrência de um div.',
-      '<strong>.exemplo:nth-of-type(odd)</strong> seleciona todas as ocorrências ímpares da classe exemplo.'
+      '<strong>.exemplo:nth-of-type(odd)</strong> seleciona os elementos com <strong>class="exemplo"</strong> que estão numa posição ímpar entre os irmãos do mesmo tipo. A contagem é feita por tipo de elemento, não por classe.'
     ],
     boardMarkup : `
     <prato/>
@@ -520,11 +520,11 @@ var levels = [
   },
   {
     selectorName: "Pseudoclasse empty",
-    helpTitle: "Seleciona elementos sem filhos",
+    helpTitle: "Seleciona elementos vazios",
     doThis : "Seleciona os bentos vazios",
     selector : "bento:empty",
     syntax: ":empty",
-    help : "Seleciona elementos que não têm outros elementos lá dentro.",
+    help : "Seleciona elementos sem conteúdo: nem outros elementos, nem texto. Até um único espaço conta como texto!",
     examples : [
       '<strong>div:empty</strong> seleciona todos os elementos <tag>div</tag> vazios.'
     ],
